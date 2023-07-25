@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+// SASS Variable
+$primary-color: #111f4d;
+$secondary-color: #ffaf20;
+$text-color: #020205;
+$bg-color: #f2f2f2;
+$white-color: #ffffff;
+$yellow-color: #ffaf20;
+$font-heading: "Lato", sans-serif;
+$font-desc: "Montserrat", sans-serif;
+$fs-heading-1: 84px;
+$fs-heading-2: 54px;
+$fs-heading-3: 52px;
+$fs-heading-4: 48px;
+$fs-desc-1: 32px;
+$fs-desc-2: 24px;
+$fs-desc-3: 20px;
+$fs-desc-4: 16px;
+
+.hero {
+    .hero-heading {
+        font-weight: 400;
+
+        span {
+            color: $yellow-color;
+            font-weight: 700;
+        }
+    }
+}
+
+.sub-heading {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.desc {
+    font-size: $fs-desc-4;
+    font-weight: 400;
+    text-align: justify;
+    text-indent: 3%;
+    line-height: 160%;
+}
+
+.definisi {
+    margin: 42px 0;
+}
+
+.visi-misi {
+    display: flex;
+    gap: 40px;
+
+    .sub-heading {
+        color: $yellow-color;
+        font-weight: 700;
+    }
+
+    .desc {
+        color: #c9c9c9;
+    }
+
+    .wrap {
+        width: 50%;
+        background-color: $primary-color;
+        padding: 34px;
+        border-radius: 14px;
+        transition: all 300ms ease;
+
+        &:hover {
+            box-shadow: 10px 14px 8px 0px rgba(0, 0, 0, 0.25);
+
+            .desc {
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    .card-body {
+        background-color: $white-color;
+        padding: 24px !important;
+        .card-title {
+            font-family: $font-desc;
+            font-size: $fs-desc-1;
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-bottom: 8px;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+        .card-text {
+            font-size: 18px;
+            font-family: $font-desc;
+            text-transform: capitalize;
+            color: #b1aaa5;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 25px 2px rgba(204, 204, 204, 1);
+    }
+}
+
+@media (max-width: 768px) {
+    .visi-misi {
+        flex-direction: column;
+
+        .wrap {
+            width: 100%;
+        }
+    }
+}
